@@ -1,0 +1,31 @@
+{
+  "name": "x-native-lang",
+  "publisher": "CATXSystemsLLC",
+  "displayName": "X Native Language Support",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CATXSystemsLLC/x-native-lang.git"
+  },
+  "icon": "icons/extension-logo.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "xfxn",
+      "aliases": ["X Native", "xfxn"],
+      "extensions": [".xfxn"],
+      "icon": {
+        "light": "icons/xfxn.png",
+        "dark": "icons/xfxn.png"
+      }
+    }],
+    "grammars": [{
+      "language": "xfxn",
+      "scopeName": "source.xfxn",
+      "path": "./xfxn.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "X Native",
+  "scopeName": "source.xfxn",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.xfxn",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.xfxn",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.xfxn",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.xfxn",
+          "match": "\\b(if|else|while|return)\\b"
+        },
+        {
+          "name": "storage.type.xfxn",
+          "match": "\\b(fn|struct|global|const|extern|let)\\b"
+        },
+        {
+          "name": "keyword.operator.word.xfxn",
+          "match": "\\b(as)\\b"
+        },
+        {
+          "name": "constant.language.boolean.xfxn",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "entity.name.type.primitive.xfxn",
+          "match": "\\b(i8|u8|i16|u16|i32|u32|bool|void)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "meta.function-call.xfxn",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.xfxn"
+            }
+          }
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hex.xfxn",
+          "match": "\\b0x[0-9a-fA-F]+\\b"
+        },
+        {
+          "name": "constant.numeric.decimal.xfxn",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arrow.xfxn",
+          "match": "->"
+        },
+        {
+          "name": "keyword.operator.logical.xfxn",
+          "match": "&&|\\|\\||!"
+        },
+        {
+          "name": "keyword.operator.comparison.xfxn",
+          "match": "==|!=|<=|>=|<|>"
+        },
+        {
+          "name": "keyword.operator.arithmetic.xfxn",
+          "match": "\\+|-|\\*|/|%"
+        },
+        {
+          "name": "keyword.operator.assignment.xfxn",
+          "match": "="
+        },
+        {
+          "name": "keyword.operator.address.xfxn",
+          "match": "&"
+        }
+      ]
+    }
+  }
+}
