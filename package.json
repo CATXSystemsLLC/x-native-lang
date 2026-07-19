@@ -12,11 +12,13 @@
   "engines": {
     "vscode": "^1.75.0"
   },
+  "browser": "./extension.js",
   "contributes": {
     "languages": [{
       "id": "xfxn",
       "aliases": ["X Native", "xfxn"],
       "extensions": [".xfxn"],
+      "configuration": "./language-configuration.json",
       "icon": {
         "light": "icons/xfxn.png",
         "dark": "icons/xfxn.png"
