@@ -53,7 +53,7 @@
         },
         {
           "name": "storage.type.xfxn",
-          "match": "\\b(fn|struct|global|const|extern|let)\\b"
+          "match": "\\b(fn|struct|global|const|extern|let|type)\\b"
         },
         {
           "name": "keyword.operator.word.xfxn",
