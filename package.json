@@ -2,7 +2,7 @@
   "name": "x-native-lang",
   "publisher": "CATXSystemsLLC",
   "displayName": "X Native Language Support",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +12,6 @@
   "engines": {
     "vscode": "^1.75.0"
   },
-  "browser": "./extension.js",
   "contributes": {
     "languages": [{
       "id": "xfxn",
