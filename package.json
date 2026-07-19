@@ -2,7 +2,7 @@
   "name": "x-native-lang",
   "publisher": "CATXSystemsLLC",
   "displayName": "X Native Language Support",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,6 +26,10 @@
       "language": "xfxn",
       "scopeName": "source.xfxn",
       "path": "./xfxn.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "xfxn",
+      "path": "./snippets.json"
     }]
   }
 }

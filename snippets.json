@@ -1,0 +1,64 @@
+{
+  "Function Declaration": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}(${2:args}) -> ${3:void} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Declare a new X Native function"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:1 == 1}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  "String Copy": {
+    "prefix": "strcopy",
+    "body": [
+      "strcopy(&${1:dst}[0], \"${2:text}\", sizeof ${1:dst});$0"
+    ],
+    "description": "Copy a NUL-terminated string into a destination buffer"
+  },
+  "String Equals": {
+    "prefix": "streq",
+    "body": [
+      "streq(&${1:a}[0], \"${2:b}\") == 1$0"
+    ],
+    "description": "Check if two NUL-terminated strings are equal"
+  },
+  "Memory Zero": {
+    "prefix": "memzero",
+    "body": [
+      "memzero(&${1:dst}[0], sizeof ${1:dst});$0"
+    ],
+    "description": "Zero out a memory buffer"
+  },
+  "Print String (puts)": {
+    "prefix": "puts",
+    "body": [
+      "puts(\"${1:text}\");$0"
+    ],
+    "description": "Write a NUL-terminated string to the console"
+  },
+  "Fixed Point Ratio": {
+    "prefix": "fx_ratio",
+    "body": [
+      "fx_ratio(${1:num}, ${2:den})$0"
+    ],
+    "description": "Create a fixed-point ratio (num/den)"
+  }
+}
